@@ -2,11 +2,23 @@
  * Pokemon TCG Placeholders - Reorganize Pokédex
  *
  * This script uses the base-pokedex.json and evolution-chains.json files
- * to create a reorganized Pokédex in pokedex-reorganized.json.
+ * to create a reorganized Pokédex in public/pokedex-reorganized.json.
  */
 
-const { saveIncrementalData } = require("../utils/fileUtils");
-const fs = require("fs");
+import {
+  saveIncrementalData,
+  loadExistingData,
+} from "./__utils__/fileUtils.js";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Get the current file's directory path (required for ES modules)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Define the path to the public directory
+const PUBLIC_DIR = path.join(path.resolve(__dirname, ".."), "public");
 
 /**
  * Reorganizes the Pokédex data using evolution chain information
@@ -15,29 +27,29 @@ const fs = require("fs");
  */
 const reorganizePokedex = async () => {
   try {
-    // Check for required input files
-    if (!fs.existsSync("base-pokedex.json")) {
+    // Check for required input files - first look in public directory
+    const basePokedexPath = path.join(PUBLIC_DIR, "base-pokedex.json");
+    if (!fs.existsSync(basePokedexPath)) {
       throw new Error(
-        "base-pokedex.json not found! Run import-base-pokedex.js first."
+        "base-pokedex.json not found in public directory! Run import-base-pokedex.js first."
       );
     }
 
-    if (!fs.existsSync("evolution-chains.json")) {
+    const evolutionChainsPath = path.join(PUBLIC_DIR, "evolution-chains.json");
+    if (!fs.existsSync(evolutionChainsPath)) {
       throw new Error(
-        "evolution-chains.json not found! Run import-evolution-chains.js first."
+        "evolution-chains.json not found in public directory! Run import-evolution-chains.js first."
       );
     }
 
     // Load the data
     console.log("Loading base Pokédex data...");
-    const pokedexData = JSON.parse(
-      fs.readFileSync("base-pokedex.json", "utf8")
-    );
+    const pokedexData = JSON.parse(fs.readFileSync(basePokedexPath, "utf8"));
     console.log(`Loaded ${pokedexData.length} Pokémon entries`);
 
     console.log("Loading evolution chain data...");
     const evolutionData = JSON.parse(
-      fs.readFileSync("evolution-chains.json", "utf8")
+      fs.readFileSync(evolutionChainsPath, "utf8")
     );
     console.log(
       `Loaded ${
@@ -233,9 +245,13 @@ const reorganizePokedex = async () => {
       );
     }
 
-    // Save the reorganized Pokédex
-    saveIncrementalData(reorganizedPokedex, "pokedex-reorganized.json");
-    console.log("Reorganized Pokédex saved to pokedex-reorganized.json");
+    // Save the reorganized Pokédex to the public directory
+    saveIncrementalData(
+      reorganizedPokedex,
+      "pokedex-reorganized.json",
+      PUBLIC_DIR
+    );
+    console.log("Reorganized Pokédex saved to public/pokedex-reorganized.json");
 
     return reorganizedPokedex;
   } catch (error) {

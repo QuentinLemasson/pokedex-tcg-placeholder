@@ -2,11 +2,23 @@
  * Pokemon TCG Placeholders - Import Base Pokédex
  *
  * This script imports all Pokémon species and their forms with French translations
- * and saves them to a base-pokedex.json file.
+ * and saves them to a base-pokedex.json file in the public directory.
  */
 
-const { fetchWithRetry, delay } = require("../utils/apiUtils");
-const { loadExistingData, saveIncrementalData } = require("../utils/fileUtils");
+import { fetchWithRetry, delay } from "./__utils__/apiUtils.js";
+import {
+  loadExistingData,
+  saveIncrementalData,
+} from "./__utils__/fileUtils.js";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Get the current file's directory path (required for ES modules)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Define the path to the public directory
+const PUBLIC_DIR = path.join(path.resolve(__dirname, ".."), "public");
 
 /**
  * Imports the base Pokédex data from the PokeAPI without evolution chain organization
@@ -15,8 +27,8 @@ const { loadExistingData, saveIncrementalData } = require("../utils/fileUtils");
  */
 const importBasePokedex = async () => {
   try {
-    // Check for existing data first
-    let pokedex = loadExistingData("base-pokedex.json");
+    // Check for existing data first - look in public directory
+    let pokedex = loadExistingData("base-pokedex.json", PUBLIC_DIR);
     const processedSpeciesIds = new Set(pokedex.map((p) => p["pokedex-id"]));
 
     // Step 1: Get a list of all Pokémon species
@@ -81,10 +93,20 @@ const importBasePokedex = async () => {
               // Mark as processed
               processedSpeciesIds.add(pokedexNumber);
 
+              // Get the default Pokemon data to fetch sprite
+              const defaultPokemonResponse = await fetchWithRetry(
+                `https://pokeapi.co/api/v2/pokemon/${pokedexNumber}/`
+              );
+              const defaultPokemonData = await defaultPokemonResponse.json();
+
+              // Get the front sprite URL
+              const frontSprite = defaultPokemonData.sprites.front_default;
+
               // Prepare the base Pokémon entry
               const baseEntry = {
                 name: frenchName,
                 "pokedex-id": pokedexNumber,
+                sprite: frontSprite,
               };
 
               // Get forms data - we need to add some separation between requests
@@ -106,8 +128,19 @@ const importBasePokedex = async () => {
                   const basePokemonName = speciesJson.name;
                   let formName = formData.name;
 
+                  // Get form sprite
+                  const formSprite = formData.sprites.front_default;
+
+                  // Get form type information
+                  let formType = null;
+                  if (formData.types && formData.types.length > 0) {
+                    formType = formData.types.map((t) => t.type.name).join("/");
+                  }
+
                   // Step 2: If there's form data URL available, fetch the localized form names
                   let frenchFormName = null;
+                  let formTypeName = "";
+
                   if (
                     formData.forms &&
                     formData.forms.length > 0 &&
@@ -122,6 +155,11 @@ const importBasePokedex = async () => {
                         formData.forms[0].url
                       );
                       const formDetails = await formDetailsResponse.json();
+
+                      // Extract form_name if available
+                      if (formDetails.form_name) {
+                        formTypeName = formDetails.form_name;
+                      }
 
                       // Look for French form name in the form details
                       if (formDetails.names && formDetails.names.length > 0) {
@@ -150,28 +188,41 @@ const importBasePokedex = async () => {
                           // For special cases like Gigantamax where the form name doesn't include base name
                           if (formName.includes("-mega")) {
                             formName = `${frenchName}-Méga`;
+                            formTypeName = formTypeName || "Mega";
                             // Handle Mega X and Y
                             if (formName.includes("-mega-x")) {
                               formName = `${frenchName}-Méga-X`;
+                              formTypeName = formTypeName || "Mega X";
                             } else if (formName.includes("-mega-y")) {
                               formName = `${frenchName}-Méga-Y`;
+                              formTypeName = formTypeName || "Mega Y";
                             }
                           } else if (formName.includes("-gmax")) {
                             formName = `${frenchName}-Gigamax`;
+                            formTypeName = formTypeName || "Gigantamax";
                           } else if (formName.includes("-alola")) {
                             formName = `${frenchName} d'Alola`;
+                            formTypeName = formTypeName || "Alola";
                           } else if (formName.includes("-galar")) {
                             formName = `${frenchName} de Galar`;
+                            formTypeName = formTypeName || "Galar";
                           } else if (formName.includes("-hisui")) {
                             formName = `${frenchName} de Hisui`;
+                            formTypeName = formTypeName || "Hisui";
                           } else if (formName.includes("-paldea")) {
                             formName = `${frenchName} de Paldea`;
+                            formTypeName = formTypeName || "Paldea";
                           } else {
                             // For other forms, just append the form name
                             const formSuffix = formName.includes("-")
                               ? formName.substring(formName.indexOf("-"))
                               : "";
                             formName = `${frenchName}${formSuffix}`;
+
+                            // Try to extract form type from the form name if not already found
+                            if (!formTypeName && formName.includes("-")) {
+                              formTypeName = formName.split("-")[1];
+                            }
                           }
                         }
                       }
@@ -189,40 +240,71 @@ const importBasePokedex = async () => {
                         basePokemonName.length
                       );
                       formName = frenchName + formSuffix;
+
+                      // Try to extract form type from the form suffix
+                      if (formSuffix && formSuffix.startsWith("-")) {
+                        formTypeName = formSuffix.substring(1);
+                      }
                     } else {
                       // For special cases like Gigantamax where the form name doesn't include base name
                       if (formName.includes("-mega")) {
                         formName = `${frenchName}-Méga`;
+                        formTypeName = formTypeName || "Mega";
                         // Handle Mega X and Y
                         if (formName.includes("-mega-x")) {
                           formName = `${frenchName}-Méga-X`;
+                          formTypeName = formTypeName || "Mega X";
                         } else if (formName.includes("-mega-y")) {
                           formName = `${frenchName}-Méga-Y`;
+                          formTypeName = formTypeName || "Mega Y";
                         }
                       } else if (formName.includes("-gmax")) {
                         formName = `${frenchName}-Gigamax`;
+                        formTypeName = formTypeName || "Gigantamax";
                       } else if (formName.includes("-alola")) {
                         formName = `${frenchName} d'Alola`;
+                        formTypeName = formTypeName || "Alola";
                       } else if (formName.includes("-galar")) {
                         formName = `${frenchName} de Galar`;
+                        formTypeName = formTypeName || "Galar";
                       } else if (formName.includes("-hisui")) {
                         formName = `${frenchName} de Hisui`;
+                        formTypeName = formTypeName || "Hisui";
                       } else if (formName.includes("-paldea")) {
                         formName = `${frenchName} de Paldea`;
+                        formTypeName = formTypeName || "Paldea";
                       } else {
                         // For other forms, just append the form name
                         const formSuffix = formName.includes("-")
                           ? formName.substring(formName.indexOf("-"))
                           : "";
                         formName = `${frenchName}${formSuffix}`;
+
+                        // Try to extract form type from the form name
+                        if (!formTypeName && formSuffix) {
+                          formTypeName = formSuffix.substring(1);
+                        }
                       }
                     }
                   }
 
-                  formEntries.push({
+                  const formEntry = {
                     name: formName,
                     "pokedex-id": pokedexNumber,
-                  });
+                    sprite: formSprite,
+                  };
+
+                  // Add form_type only if it exists
+                  if (formTypeName) {
+                    formEntry.form_type = formTypeName;
+                  }
+
+                  // Add the Pokémon's type(s)
+                  if (formType) {
+                    formEntry.type = formType;
+                  }
+
+                  formEntries.push(formEntry);
 
                   // Add a small delay between form fetches
                   await delay(300);
@@ -232,6 +314,16 @@ const importBasePokedex = async () => {
                     error.message
                   );
                 }
+              }
+
+              // Add type information to base entry
+              if (
+                defaultPokemonData.types &&
+                defaultPokemonData.types.length > 0
+              ) {
+                baseEntry.type = defaultPokemonData.types
+                  .map((t) => t.type.name)
+                  .join("/");
               }
 
               successCount++;
@@ -249,9 +341,9 @@ const importBasePokedex = async () => {
         pokedex.push(...newEntries);
         console.log(`Added ${newEntries.length} new entries to pokedex`);
 
-        // Save data after each batch
+        // Save data after each batch to the public directory
         if (newEntries.length > 0) {
-          saveIncrementalData(pokedex, "base-pokedex.json");
+          saveIncrementalData(pokedex, "base-pokedex.json", PUBLIC_DIR);
         }
       } catch (batchError) {
         console.error(`Error processing batch:`, batchError.message);
@@ -266,7 +358,7 @@ const importBasePokedex = async () => {
 
       // Add a larger delay between batches to prevent rate limiting
       if (i + batchSize < remainingSpecies.length) {
-        const waitTime = 2000; // 2 seconds
+        const waitTime = 300;
         console.log(`Waiting ${waitTime / 1000} seconds before next batch...`);
         await delay(waitTime);
       }
@@ -277,8 +369,8 @@ const importBasePokedex = async () => {
       `Successful species: ${successCount}, Failed species: ${failureCount}`
     );
 
-    // Final save
-    saveIncrementalData(pokedex, "base-pokedex.json");
+    // Final save to the public directory
+    saveIncrementalData(pokedex, "base-pokedex.json", PUBLIC_DIR);
 
     return pokedex;
   } catch (error) {

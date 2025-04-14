@@ -48,7 +48,4 @@ const fetchWithRetry = async (url, retries = 3, delay = 300) => {
  */
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-module.exports = {
-  fetchWithRetry,
-  delay,
-};
+export { fetchWithRetry, delay };

@@ -8,12 +8,13 @@ The project is organized into the following structure:
 
 ```
 pokemon-tcg-placeholders/
-├── utils/                          # Utility modules
-│   ├── apiUtils.js                 # API-related utilities (fetching, retry logic)
-│   ├── fileUtils.js                # File system utilities (loading, saving, backups)
-│   ├── evolutionUtils.js           # Evolution chain organization utilities
-│   └── importUtils.js              # Main import functionality
+
 ├── scripts/                        # Utility modules
+│   ├── utils/                          # Utility modules
+│   │   ├── apiUtils.js                 # API-related utilities (fetching, retry logic)
+│   │   ├── fileUtils.js                # File system utilities (loading, saving, backups)
+│   │   ├── evolutionUtils.js           # Evolution chain organization utilities
+│   │   └── importUtils.js              # Main import functionality
 │   ├── import-base-pokedex.js      # Script to import Pokémon species and forms
 │   ├── import-evolution-chains.js  # Script to import evolution chains
 │   ├── reorganize-pokedex.js       # Script to reorganize Pokédex using other data

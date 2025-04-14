@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import CardGrid from "./components/CardGrid";
-import Pagination from "./components/Pagination";
 import { Pokemon } from "./types";
 import { exportToPdf } from "./utils/pdfExport";
 
@@ -57,19 +56,16 @@ function App() {
             Export to PDF
           </button>
         </h1>
-
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 mb-4">
-          <Pagination
+      </header>
+      <div className="max-w-6xl mx-auto h-full flex flex-col">
+        <main ref={mainRef} className="flex-1">
+          <CardGrid
+            pokemons={currentPokemons}
             currentPage={currentPage}
             totalPages={totalPages}
             onPrevPage={handlePrevPage}
             onNextPage={handleNextPage}
           />
-        </div>
-      </header>
-      <div className="max-w-6xl mx-auto mt-4 h-full flex flex-col">
-        <main ref={mainRef} className="flex-1">
-          <CardGrid pokemons={currentPokemons} />
         </main>
       </div>
     </div>

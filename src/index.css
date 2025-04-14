@@ -57,7 +57,9 @@
     }
 
     .pagination,
-    button.export-btn {
+    button.export-btn,
+    [aria-label="Previous page"],
+    [aria-label="Next page"] {
       @apply hidden;
     }
 

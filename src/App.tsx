@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import "./App.css";
+import CardGrid from "./components/CardGrid";
+import Pagination from "./components/Pagination";
+import { Pokemon } from "./types";
+import { exportToPdf } from "./utils/pdfExport";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 9; // 3x3 grid
+  const totalPages = Math.ceil(pokemons.length / cardsPerPage);
+
+  useEffect(() => {
+    // Fetch Pokemon data
+    fetch("/pokedex-cleaned.json")
+      .then((response) => response.json())
+      .then((data) => setPokemons(data))
+      .catch((error) => console.error("Error fetching Pokemon data:", error));
+  }, []);
+
+  const handlePrevPage = () => {
+    setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev));
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prev) => (prev < totalPages ? prev + 1 : prev));
+  };
+
+  // Get current page's Pokemon
+  const currentPokemons = pokemons.slice(
+    (currentPage - 1) * cardsPerPage,
+    currentPage * cardsPerPage
+  );
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+      <header>
+        <h1>Pokémon TCG Placeholder Cards</h1>
+        <div className="controls">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPrevPage={handlePrevPage}
+            onNextPage={handleNextPage}
+          />
+          <button className="export-btn" onClick={exportToPdf}>
+            Export to PDF
+          </button>
+        </div>
+      </header>
+
+      <CardGrid pokemons={currentPokemons} />
+    </div>
+  );
 }
 
-export default App
+export default App;

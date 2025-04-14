@@ -1,54 +1,89 @@
-# React + TypeScript + Vite
+# Pokémon TCG Placeholder Cards Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that generates placeholder cards for the Pokémon Trading Card Game.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Displays Pokémon cards from a local JSON database
+- Shows cards in a 3x3 grid layout
+- Pagination to navigate through all Pokémon
+- Export to PDF functionality for printing cards
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v18.0.0 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn install
+   ```
+
+### Running the application
+
+1. Start the development server:
+   ```
+   npm run dev
+   ```
+   or
+   ```
+   yarn dev
+   ```
+2. Open your browser and navigate to `http://localhost:5173`
+
+### Building for production
+
+1. Build the application:
+   ```
+   npm run build
+   ```
+   or
+   ```
+   yarn build
+   ```
+2. Preview the production build:
+   ```
+   npm run preview
+   ```
+   or
+   ```
+   yarn preview
+   ```
+
+## Data Source
+
+The application uses a local JSON file (`pokedex-cleaned.json`) containing Pokémon data with the following structure:
+
+```json
+{
+  "name": "Bulbizarre",
+  "pokedex-id": 1,
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "type": "grass/poison"
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Exporting Cards to PDF
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To export the current page of cards to PDF:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Click the "Export to PDF" button
+2. The browser's print dialog will open
+3. Select "Save as PDF" from the print options
+4. Choose a destination and click "Save"
+
+## Technologies Used
+
+- React
+- TypeScript
+- Vite
+- CSS

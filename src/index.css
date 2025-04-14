@@ -3,33 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --card-max-height: 250px;
+  }
+
   body {
     @apply bg-appBg text-textColor;
     font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
 @layer components {
-  .app-container {
-    @apply max-w-7xl mx-auto p-8;
-  }
-
-  header {
-    @apply flex flex-col items-center mb-8;
-  }
-
-  h1 {
-    @apply text-secondary text-center mb-4 text-3xl font-bold;
-  }
-
-  .controls {
-    @apply flex flex-col items-center gap-4 w-full;
-  }
-
-  .pagination {
-    @apply flex items-center gap-4;
-  }
-
   button {
     @apply bg-secondary text-white border-none py-2 px-4 rounded font-bold cursor-pointer transition-colors;
   }
@@ -49,71 +37,48 @@
   .export-btn:hover {
     @apply bg-yellow-500;
   }
-
-  .card-grid {
-    @apply grid grid-cols-3 gap-6;
-  }
-
-  .card {
-    @apply border-2 border-secondary rounded-lg overflow-hidden bg-white shadow-md transition-transform;
-    aspect-ratio: 63/88;
-  }
-
-  .card:hover {
-    @apply -translate-y-1;
-  }
-
-  .card-inner {
-    @apply flex flex-col h-full;
-  }
-
-  .card-image {
-    @apply flex justify-center items-center p-4 bg-gray-100 h-3/5;
-  }
-
-  .card-image img {
-    @apply max-w-full max-h-full object-contain;
-  }
-
-  .card-info {
-    @apply p-4 flex flex-col flex-grow;
-  }
-
-  .card-info h2 {
-    @apply m-0 mb-2 text-base text-secondary text-center;
-  }
-
-  .card-details {
-    @apply text-sm flex flex-col gap-1;
-  }
-
-  .card-details p {
-    @apply m-0;
-  }
 }
 
 @layer utilities {
+  /* Custom TCG card aspect ratio */
+  .aspect-tcg {
+    aspect-ratio: 63/88;
+  }
+
+  /* Print styles for PDF export */
   @media print {
-    .controls {
+    body {
+      @apply bg-white overflow-visible;
+      height: auto;
+    }
+
+    header h1 {
       @apply hidden;
     }
 
-    body {
-      @apply bg-white;
-    }
-
-    .app-container {
-      @apply p-0;
+    .pagination,
+    button.export-btn {
+      @apply hidden;
     }
 
     .card {
       break-inside: avoid;
       page-break-inside: avoid;
-      @apply shadow-none;
+      @apply shadow-none border-secondary;
+      width: 2.5in !important;
+      height: 3.5in !important;
+      margin: 0.25in;
     }
 
-    header h1 {
-      @apply hidden;
+    main {
+      display: block !important;
+      height: auto !important;
+    }
+
+    .grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
     }
   }
 }

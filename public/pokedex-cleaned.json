@@ -18,17 +18,17 @@
     "type": "grass/poison"
   },
   {
-    "name": "Florizarre Gigamax",
-    "pokedex-id": 3,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10195.png",
-    "form_type": "gmax",
-    "type": "grass/poison"
-  },
-  {
     "name": "Méga-Florizarre",
     "pokedex-id": 3,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10033.png",
     "form_type": "mega",
+    "type": "grass/poison"
+  },
+  {
+    "name": "Florizarre Gigamax",
+    "pokedex-id": 3,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10195.png",
+    "form_type": "gmax",
     "type": "grass/poison"
   },
   {
@@ -50,24 +50,24 @@
     "type": "fire/flying"
   },
   {
-    "name": "Dracaufeu Gigamax",
-    "pokedex-id": 6,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10196.png",
-    "form_type": "gmax",
-    "type": "fire/flying"
-  },
-  {
     "name": "Méga-Dracaufeu X",
     "pokedex-id": 6,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10034.png",
-    "form_type": "mega-x",
+    "form_type": "mega",
     "type": "fire/dragon"
   },
   {
     "name": "Méga-Dracaufeu Y",
     "pokedex-id": 6,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10035.png",
-    "form_type": "mega-y",
+    "form_type": "mega",
+    "type": "fire/flying"
+  },
+  {
+    "name": "Dracaufeu Gigamax",
+    "pokedex-id": 6,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10196.png",
+    "form_type": "gmax",
     "type": "fire/flying"
   },
   {
@@ -89,17 +89,17 @@
     "type": "water"
   },
   {
-    "name": "Méga-Tortank",
-    "pokedex-id": 9,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10036.png",
-    "form_type": "mega",
-    "type": "water"
-  },
-  {
     "name": "Tortank Gigamax",
     "pokedex-id": 9,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10197.png",
     "form_type": "gmax",
+    "type": "water"
+  },
+  {
+    "name": "Méga-Tortank",
+    "pokedex-id": 9,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10036.png",
+    "form_type": "mega",
     "type": "water"
   },
   {
@@ -207,7 +207,7 @@
     "name": "Rattatac d'Alola Dominant",
     "pokedex-id": 20,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10093.png",
-    "form_type": "totem-alola",
+    "form_type": "totem",
     "type": "dark/normal"
   },
   {
@@ -250,42 +250,42 @@
     "name": "Pikachu Casquette d’Alola",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10099.png",
-    "form_type": "alola-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette d’Unys",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10097.png",
-    "form_type": "unova-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette Monde",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10160.png",
-    "form_type": "world-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette Originale",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10094.png",
-    "form_type": "original-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette Partenaire",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10148.png",
-    "form_type": "partner-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Catcheur",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10084.png",
-    "form_type": "libre",
+    "form_type": "cosplay",
     "type": "electric"
   },
   {
@@ -299,14 +299,14 @@
     "name": "Pikachu Docteur",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10083.png",
-    "form_type": "phd",
+    "form_type": "cosplay",
     "type": "electric"
   },
   {
     "name": "Pikachu Lady",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10081.png",
-    "form_type": "belle",
+    "form_type": "cosplay",
     "type": "electric"
   },
   {
@@ -320,35 +320,35 @@
     "name": "Pikachu Rockeur",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10080.png",
-    "form_type": "rock-star",
+    "form_type": "cosplay",
     "type": "electric"
   },
   {
     "name": "Pikachu Star",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10082.png",
-    "form_type": "pop-star",
+    "form_type": "cosplay",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette de Hoenn",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10095.png",
-    "form_type": "hoenn-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette de Kalos",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10098.png",
-    "form_type": "kalos-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
     "name": "Pikachu Casquette de Sinnoh",
     "pokedex-id": 25,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10096.png",
-    "form_type": "sinnoh-cap",
+    "form_type": "cap",
     "type": "electric"
   },
   {
@@ -607,12 +607,6 @@
     "type": "normal"
   },
   {
-    "name": "Berserkatt",
-    "pokedex-id": 863,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/863.png",
-    "type": "steel"
-  },
-  {
     "name": "Miaouss d'Alola",
     "pokedex-id": 52,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10107.png",
@@ -631,6 +625,12 @@
     "pokedex-id": 52,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10161.png",
     "form_type": "galar",
+    "type": "steel"
+  },
+  {
+    "name": "Berserkatt",
+    "pokedex-id": 863,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/863.png",
     "type": "steel"
   },
   {
@@ -929,16 +929,16 @@
     "type": "normal/flying"
   },
   {
-    "name": "Palarticho",
-    "pokedex-id": 865,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/865.png",
-    "type": "fighting"
-  },
-  {
     "name": "Canarticho de Galar",
     "pokedex-id": 83,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10166.png",
     "form_type": "galar",
+    "type": "fighting"
+  },
+  {
+    "name": "Palarticho",
+    "pokedex-id": 865,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/865.png",
     "type": "fighting"
   },
   {
@@ -1022,17 +1022,17 @@
     "type": "ghost/poison"
   },
   {
-    "name": "Ectoplasma Gigamax",
-    "pokedex-id": 94,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10202.png",
-    "form_type": "gmax",
-    "type": "ghost/poison"
-  },
-  {
     "name": "Méga-Ectoplasma",
     "pokedex-id": 94,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
     "form_type": "mega",
+    "type": "ghost/poison"
+  },
+  {
+    "name": "Ectoplasma Gigamax",
+    "pokedex-id": 94,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10202.png",
+    "form_type": "gmax",
     "type": "ghost/poison"
   },
   {
@@ -1079,7 +1079,7 @@
     "type": "water"
   },
   {
-    "name": "Leviator Gigamax",
+    "name": "Krabboss Gigamax",
     "pokedex-id": 99,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10203.png",
     "form_type": "gmax",
@@ -1327,16 +1327,16 @@
     "type": "psychic/fairy"
   },
   {
-    "name": "M. Glaquette",
-    "pokedex-id": 866,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png",
-    "type": "ice/psychic"
-  },
-  {
     "name": "M. Mime de Galar",
     "pokedex-id": 122,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10168.png",
     "form_type": "galar",
+    "type": "ice/psychic"
+  },
+  {
+    "name": "M. Glaquette",
+    "pokedex-id": 866,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png",
     "type": "ice/psychic"
   },
   {
@@ -1435,21 +1435,21 @@
     "name": "Tauros de Paldéa Race Aquatique",
     "pokedex-id": 128,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png",
-    "form_type": "paldea-aqua-breed",
+    "form_type": "paldea",
     "type": "fighting/water"
   },
   {
     "name": "Tauros de Paldéa Race Combative",
     "pokedex-id": 128,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10250.png",
-    "form_type": "paldea-combat-breed",
+    "form_type": "paldea",
     "type": "fighting"
   },
   {
     "name": "Tauros de Paldéa Race Flamboyante",
     "pokedex-id": 128,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png",
-    "form_type": "paldea-blaze-breed",
+    "form_type": "paldea",
     "type": "fighting/fire"
   },
   {
@@ -1639,6 +1639,18 @@
     "type": "ice/flying"
   },
   {
+    "name": "Électhor",
+    "pokedex-id": 145,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+    "type": "electric/flying"
+  },
+  {
+    "name": "Sulfura",
+    "pokedex-id": 146,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+    "type": "fire/flying"
+  },
+  {
     "name": "Artikodin de Galar",
     "pokedex-id": 144,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png",
@@ -1646,23 +1658,11 @@
     "type": "psychic/flying"
   },
   {
-    "name": "Électhor",
-    "pokedex-id": 145,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
-    "type": "electric/flying"
-  },
-  {
     "name": "Électhor de Galar",
     "pokedex-id": 145,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png",
     "form_type": "galar",
     "type": "fighting/flying"
-  },
-  {
-    "name": "Sulfura",
-    "pokedex-id": 146,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
-    "type": "fire/flying"
   },
   {
     "name": "Sulfura de Galar",
@@ -1699,14 +1699,14 @@
     "name": "Méga-Mewtwo X",
     "pokedex-id": 150,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10043.png",
-    "form_type": "mega-x",
+    "form_type": "mega",
     "type": "psychic/fighting"
   },
   {
     "name": "Méga-Mewtwo Y",
     "pokedex-id": 150,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10044.png",
-    "form_type": "mega-y",
+    "form_type": "mega",
     "type": "psychic"
   },
   {
@@ -1982,17 +1982,17 @@
     "type": "water/ground"
   },
   {
+    "name": "Maraiste",
+    "pokedex-id": 195,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
+    "type": "water/ground"
+  },
+  {
     "name": "Axoloto de Paldéa",
     "pokedex-id": 194,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10253.png",
     "form_type": "paldea",
     "type": "poison/ground"
-  },
-  {
-    "name": "Maraiste",
-    "pokedex-id": 195,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
-    "type": "water/ground"
   },
   {
     "name": "Terraiste",
@@ -2025,11 +2025,202 @@
     "type": "ghost"
   },
   {
-    "name": "Zarbi",
+    "name": "Zarbi A",
     "pokedex-id": 201,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
     "type": "psychic"
   },
+  {
+    "name": "Zarbi B",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi C",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi D",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi E",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi F",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi G",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi H",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi I",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi J",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi K",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi L",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi M",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi N",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi O",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi P",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi Q",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi R",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi S",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi T",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi U",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi V",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi W",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi X",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi Y",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi Z",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi !",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201n.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+  {
+    "name": "Zarbi ?",
+    "pokedex-id": 201,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
+    "form_type": "unknown",
+    "type": "psychic"
+  },
+
   {
     "name": "Okéoké",
     "pokedex-id": 360,
@@ -2116,16 +2307,16 @@
     "type": "water/poison"
   },
   {
-    "name": "Qwilpik",
-    "pokedex-id": 904,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png",
-    "type": "dark/poison"
-  },
-  {
     "name": "Qwilfish de Hisui",
     "pokedex-id": 211,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png",
     "form_type": "hisui",
+    "type": "dark/poison"
+  },
+  {
+    "name": "Qwilpik",
+    "pokedex-id": 904,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png",
     "type": "dark/poison"
   },
   {
@@ -2160,16 +2351,16 @@
     "type": "dark/ice"
   },
   {
-    "name": "Farfurex",
-    "pokedex-id": 903,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png",
-    "type": "fighting/poison"
-  },
-  {
     "name": "Farfuret de Hisui",
     "pokedex-id": 215,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10235.png",
     "form_type": "hisui",
+    "type": "fighting/poison"
+  },
+  {
+    "name": "Farfurex",
+    "pokedex-id": 903,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png",
     "type": "fighting/poison"
   },
   {
@@ -2234,16 +2425,16 @@
     "type": "water/rock"
   },
   {
-    "name": "Corayôme",
-    "pokedex-id": 864,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/864.png",
-    "type": "ghost"
-  },
-  {
     "name": "Corayon de Galar",
     "pokedex-id": 222,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10173.png",
     "form_type": "galar",
+    "type": "ghost"
+  },
+  {
+    "name": "Corayôme",
+    "pokedex-id": 864,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/864.png",
     "type": "ghost"
   },
   {
@@ -3131,21 +3322,21 @@
     "name": "Morphéo Blizzard",
     "pokedex-id": 351,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10015.png",
-    "form_type": "snowy",
+    "form_type": "weather",
     "type": "ice"
   },
   {
     "name": "Morphéo Solaire",
     "pokedex-id": 351,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10013.png",
-    "form_type": "sunny",
+    "form_type": "weather",
     "type": "fire"
   },
   {
     "name": "Morphéo Eau de Pluie",
     "pokedex-id": 351,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10014.png",
-    "form_type": "rainy",
+    "form_type": "weather",
     "type": "water"
   },
   {
@@ -3444,21 +3635,21 @@
     "name": "Deoxys Attaque",
     "pokedex-id": 386,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10001.png",
-    "form_type": "attack",
+    "form_type": "deoxys",
     "type": "psychic"
   },
   {
     "name": "Deoxys Défense",
     "pokedex-id": 386,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10002.png",
-    "form_type": "defense",
+    "form_type": "deoxys",
     "type": "psychic"
   },
   {
     "name": "Deoxys Vitesse",
     "pokedex-id": 386,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10003.png",
-    "form_type": "speed",
+    "form_type": "deoxys",
     "type": "psychic"
   },
   {
@@ -3606,6 +3797,20 @@
     "type": "bug"
   },
   {
+    "name": "Cheniti Déchet",
+    "pokedex-id": 412,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10004.png",
+    "form_type": "wormadam",
+    "type": "bug"
+  },
+  {
+    "name": "Cheniti Sable",
+    "pokedex-id": 412,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10004.png",
+    "form_type": "wormadam",
+    "type": "bug"
+  },
+  {
     "name": "Cheniselle",
     "pokedex-id": 413,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
@@ -3615,14 +3820,14 @@
     "name": "Cheniselle Déchet",
     "pokedex-id": 413,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10005.png",
-    "form_type": "trash",
+    "form_type": "wormadam",
     "type": "bug/steel"
   },
   {
     "name": "Cheniselle Sable",
     "pokedex-id": 413,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10004.png",
-    "form_type": "sandy",
+    "form_type": "wormadam",
     "type": "bug/ground"
   },
   {
@@ -3674,15 +3879,36 @@
     "type": "grass"
   },
   {
-    "name": "Sancoki",
+    "name": "Ceriflor Zenith",
+    "pokedex-id": 421,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10006.png",
+    "form_type": "zenith",
+    "type": "grass"
+  },
+  {
+    "name": "Sancoki Orient",
     "pokedex-id": 422,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422.png",
     "type": "water"
   },
   {
-    "name": "Tritosor",
+    "name": "Tritosor Orient",
     "pokedex-id": 423,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png",
+    "type": "water/ground"
+  },
+  {
+    "name": "Sancoki Occident",
+    "pokedex-id": 422,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422.png",
+    "form_type": "occident",
+    "type": "water"
+  },
+  {
+    "name": "Tritosor Occident",
+    "pokedex-id": 423,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png",
+    "form_type": "occident",
     "type": "water/ground"
   },
   {
@@ -3891,35 +4117,35 @@
     "name": "Motisma Chaleur",
     "pokedex-id": 479,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10008.png",
-    "form_type": "heat",
+    "form_type": "rotom",
     "type": "electric/fire"
   },
   {
     "name": "Motisma Froid",
     "pokedex-id": 479,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10010.png",
-    "form_type": "frost",
+    "form_type": "rotom",
     "type": "electric/ice"
   },
   {
     "name": "Motisma Hélice",
     "pokedex-id": 479,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10011.png",
-    "form_type": "fan",
+    "form_type": "rotom",
     "type": "electric/flying"
   },
   {
     "name": "Motisma Lavage",
     "pokedex-id": 479,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10009.png",
-    "form_type": "wash",
+    "form_type": "rotom",
     "type": "electric/water"
   },
   {
     "name": "Motisma Tonte",
     "pokedex-id": 479,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10012.png",
-    "form_type": "mow",
+    "form_type": "rotom",
     "type": "electric/grass"
   },
   {
@@ -3941,16 +4167,16 @@
     "type": "psychic"
   },
   {
+    "name": "Dialga",
+    "pokedex-id": 483,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png",
+    "type": "steel/dragon"
+  },
+  {
     "name": "Diagla Originel",
     "pokedex-id": 483,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10245.png",
     "form_type": "origin",
-    "type": "steel/dragon"
-  },
-  {
-    "name": "Dialga",
-    "pokedex-id": 483,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png",
     "type": "steel/dragon"
   },
   {
@@ -4398,17 +4624,17 @@
     "type": "water"
   },
   {
-    "name": "Bargantua Blanc",
-    "pokedex-id": 550,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10247.png",
-    "form_type": "white-striped",
-    "type": "water"
-  },
-  {
     "name": "Bargantua Bleu",
     "pokedex-id": 550,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10016.png",
     "form_type": "blue-striped",
+    "type": "water"
+  },
+  {
+    "name": "Bargantua Blanc",
+    "pokedex-id": 550,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10247.png",
+    "form_type": "white-striped",
     "type": "water"
   },
   {
@@ -4469,10 +4695,10 @@
     "type": "ice"
   },
   {
-    "name": "Darumacho de Galar Normal",
+    "name": "Darumacho de Galar",
     "pokedex-id": 555,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10177.png",
-    "form_type": "galar-standard",
+    "form_type": "galar",
     "type": "ice"
   },
   {
@@ -4531,16 +4757,16 @@
     "type": "ghost"
   },
   {
-    "name": "Tutétékri",
-    "pokedex-id": 867,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png",
-    "type": "ground/ghost"
-  },
-  {
     "name": "Tutafeh de Galar",
     "pokedex-id": 562,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10179.png",
     "form_type": "galar",
+    "type": "ground/ghost"
+  },
+  {
+    "name": "Tutétékri",
+    "pokedex-id": 867,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png",
     "type": "ground/ghost"
   },
   {
@@ -5204,7 +5430,7 @@
     "type": "water/dark"
   },
   {
-    "name": "Amphinobi Forme Sacha",
+    "name": "Sachanobi",
     "pokedex-id": 658,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10117.png",
     "form_type": "ash",
@@ -5339,7 +5565,7 @@
     "type": "psychic"
   },
   {
-    "name": "Mistigrix",
+    "name": "Mistigrix Mâle",
     "pokedex-id": 678,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png",
     "type": "psychic"
@@ -5553,6 +5779,13 @@
     "type": "ghost/grass"
   },
   {
+    "name": "Pitrouille Mini",
+    "pokedex-id": 710,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10027.png",
+    "form_type": "size",
+    "type": "ghost/grass"
+  },
+  {
     "name": "Pitrouille",
     "pokedex-id": 710,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png",
@@ -5562,21 +5795,21 @@
     "name": "Pitrouille Maxi",
     "pokedex-id": 710,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10028.png",
-    "form_type": "large",
-    "type": "ghost/grass"
-  },
-  {
-    "name": "Pitrouille Mini",
-    "pokedex-id": 710,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10027.png",
-    "form_type": "small",
+    "form_type": "size",
     "type": "ghost/grass"
   },
   {
     "name": "Pitrouille Ultra",
     "pokedex-id": 710,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10029.png",
-    "form_type": "super",
+    "form_type": "size",
+    "type": "ghost/grass"
+  },
+  {
+    "name": "Banshitrouye Mini",
+    "pokedex-id": 711,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10030.png",
+    "form_type": "size",
     "type": "ghost/grass"
   },
   {
@@ -5589,21 +5822,14 @@
     "name": "Banshitrouye Maxi",
     "pokedex-id": 711,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10031.png",
-    "form_type": "large",
-    "type": "ghost/grass"
-  },
-  {
-    "name": "Banshitrouye Mini",
-    "pokedex-id": 711,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10030.png",
-    "form_type": "small",
+    "form_type": "size",
     "type": "ghost/grass"
   },
   {
     "name": "Banshitrouye Ultra",
     "pokedex-id": 711,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10032.png",
-    "form_type": "super",
+    "form_type": "size",
     "type": "ghost/grass"
   },
   {
@@ -5656,28 +5882,21 @@
     "type": "dragon/ground"
   },
   {
-    "name": "Zygarde Forme 10 %",
+    "name": "Zygarde 10 %",
     "pokedex-id": 718,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
     "form_type": "10-power-construct",
     "type": "dragon/ground"
   },
   {
-    "name": "Zygarde Forme 10 %",
-    "pokedex-id": 718,
-    "sprite": null,
-    "form_type": "10",
-    "type": "dragon/ground"
-  },
-  {
-    "name": "Zygarde Forme 50 %",
+    "name": "Zygarde 50 %",
     "pokedex-id": 718,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10119.png",
     "form_type": "50-power-construct",
     "type": "dragon/ground"
   },
   {
-    "name": "Zygarde Forme Parfaite",
+    "name": "Zygarde Parfait",
     "pokedex-id": 718,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10120.png",
     "form_type": "complete",
@@ -5860,21 +6079,21 @@
     "name": "Plumeline Style Buyō",
     "pokedex-id": 741,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10125.png",
-    "form_type": "sensu",
+    "form_type": "oricorio",
     "type": "ghost/flying"
   },
   {
     "name": "Plumeline Style Hula",
     "pokedex-id": 741,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10124.png",
-    "form_type": "pau",
+    "form_type": "oricorio",
     "type": "psychic/flying"
   },
   {
     "name": "Plumeline Style Pom-Pom",
     "pokedex-id": 741,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10123.png",
-    "form_type": "pom-pom",
+    "form_type": "oricorio",
     "type": "electric/flying"
   },
   {
@@ -5903,27 +6122,20 @@
     "type": "rock"
   },
   {
-    "name": "Rocabot Tempo Perso",
-    "pokedex-id": 744,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10151.png",
-    "form_type": "own-tempo",
-    "type": "rock"
-  },
-  {
-    "name": "Lougaroc",
+    "name": "Lougaroc Diurne",
     "pokedex-id": 745,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png",
     "type": "rock"
   },
   {
-    "name": "Lougaroc Forme Crépusculaire",
+    "name": "Lougaroc Crépusculaire",
     "pokedex-id": 745,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10152.png",
     "form_type": "dusk",
     "type": "rock"
   },
   {
-    "name": "Lougaroc Forme Nocturne",
+    "name": "Lougaroc Nocturne",
     "pokedex-id": 745,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10126.png",
     "form_type": "midnight",
@@ -6135,91 +6347,91 @@
     "name": "Météno Forme Météore Noyeau Bleu",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10133.png",
-    "form_type": "blue-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
     "name": "Météno Forme Météore Noyeau Indigo",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10134.png",
-    "form_type": "indigo-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
     "name": "Météno Forme Météore Noyeau Jaune",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10131.png",
-    "form_type": "yellow-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
     "name": "Météno Forme Météore Noyeau Orange",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10130.png",
-    "form_type": "orange-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
     "name": "Météno Forme Météore Noyeau Vert",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10132.png",
-    "form_type": "green-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
     "name": "Météno Forme Météore Noyeau Violet",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10135.png",
-    "form_type": "violet-meteor",
+    "form_type": "meteor",
     "type": "rock/flying"
   },
   {
-    "name": "Météno Noyeau Bleu",
+    "name": "Météno Noyeau",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10140.png",
-    "form_type": "blue",
+    "form_type": "core",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Indigo",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10141.png",
-    "form_type": "indigo",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Jaune",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10138.png",
-    "form_type": "yellow",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Orange",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10137.png",
-    "form_type": "orange",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Rouge",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10136.png",
-    "form_type": "red",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Vert",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10139.png",
-    "form_type": "green",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
     "name": "Météno Noyeau Violet",
     "pokedex-id": 774,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10142.png",
-    "form_type": "violet",
+    "form_type": "core-color",
     "type": "rock/flying"
   },
   {
@@ -6257,7 +6469,7 @@
     "name": "Mimiqui Dominant",
     "pokedex-id": 778,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10144.png",
-    "form_type": "totem-disguised",
+    "form_type": "totem",
     "type": "ghost/fairy"
   },
   {
@@ -6417,21 +6629,21 @@
     "name": "Necrozma Crinière du Couchant",
     "pokedex-id": 800,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10155.png",
-    "form_type": "dusk",
+    "form_type": "necrozma",
     "type": "psychic/steel"
   },
   {
     "name": "Necrozma Ailes de l’Aurore",
     "pokedex-id": 800,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10156.png",
-    "form_type": "dawn",
+    "form_type": "necrozma",
     "type": "psychic/ghost"
   },
   {
     "name": "Ultra-Necrozma",
     "pokedex-id": 800,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10157.png",
-    "form_type": "ultra",
+    "form_type": "necrozma",
     "type": "psychic/dragon"
   },
   {
@@ -6804,14 +7016,14 @@
     "name": "Nigosier Forme Gobe-Chu",
     "pokedex-id": 845,
     "sprite": null,
-    "form_type": "gorging",
+    "form_type": "nigosier",
     "type": "flying/water"
   },
   {
     "name": "Nigosier Forme Gobe-Tout",
     "pokedex-id": 845,
     "sprite": null,
-    "form_type": "gulping",
+    "form_type": "nigosier",
     "type": "flying/water"
   },
   {
@@ -6846,16 +7058,9 @@
     "type": "electric/poison"
   },
   {
-    "name": "Salarsen Forme Aigüe Gigamax",
+    "name": "Salarsen Gigamax",
     "pokedex-id": 849,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10219.png",
-    "form_type": "gmax",
-    "type": "electric/poison"
-  },
-  {
-    "name": "Salarsen Forme Grave Gigamax",
-    "pokedex-id": 849,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10228.png",
     "form_type": "gmax",
     "type": "electric/poison"
   },
@@ -7015,7 +7220,7 @@
     "type": "ice"
   },
   {
-    "name": "Wimessir",
+    "name": "Wimessir Mâle",
     "pokedex-id": 876,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
     "type": "psychic/normal"
@@ -7166,31 +7371,31 @@
     "type": "fighting"
   },
   {
-    "name": "Shifours",
+    "name": "Shifours Poing Final",
     "pokedex-id": 892,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/892.png",
     "type": "fighting/dark"
   },
   {
-    "name": "Shifours Style Mille Poings",
+    "name": "Shifours Poing Final Gigamax",
+    "pokedex-id": 892,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10226.png",
+    "form_type": "gmax",
+    "type": "fighting/dark"
+  },
+  {
+    "name": "Shifours Mille Poings",
     "pokedex-id": 892,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10191.png",
     "form_type": "rapid-strike",
     "type": "fighting/water"
   },
   {
-    "name": "Shifours Style Mille Poings Gigamax",
+    "name": "Shifours Mille Poings Gigamax",
     "pokedex-id": 892,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10227.png",
     "form_type": "gmax",
     "type": "fighting/water"
-  },
-  {
-    "name": "Shifours Style Poing Final Gigamax",
-    "pokedex-id": 892,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10226.png",
-    "form_type": "gmax",
-    "type": "fighting/dark"
   },
   {
     "name": "Zarude",
@@ -7230,24 +7435,24 @@
     "type": "ghost"
   },
   {
-    "name": "Calyrex Cavalier d’Effroi",
-    "pokedex-id": 898,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10194.png",
-    "form_type": "shadow",
-    "type": "psychic/ghost"
-  },
-  {
-    "name": "Calyrex Cavalier du Froid",
-    "pokedex-id": 898,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10193.png",
-    "form_type": "ice",
-    "type": "psychic/ice"
-  },
-  {
     "name": "Sylveroy",
     "pokedex-id": 898,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/898.png",
     "type": "psychic/grass"
+  },
+  {
+    "name": "Sylveroy Cavalier d’Effroi",
+    "pokedex-id": 898,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10194.png",
+    "form_type": "calyrex",
+    "type": "psychic/ghost"
+  },
+  {
+    "name": "Sylveroy Cavalier du Froid",
+    "pokedex-id": 898,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10193.png",
+    "form_type": "calyrex",
+    "type": "psychic/ice"
   },
   {
     "name": "Amovénus",
@@ -7323,7 +7528,7 @@
     "type": "normal"
   },
   {
-    "name": "Fragroin",
+    "name": "Fragroin Mâle",
     "pokedex-id": 916,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/916.png",
     "type": "normal"
@@ -7436,21 +7641,21 @@
     "name": "Tapatoès Plumage Blanc",
     "pokedex-id": 931,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10262.png",
-    "form_type": "white-plumage",
+    "form_type": "plumage",
     "type": "normal/flying"
   },
   {
     "name": "Tapatoès Plumage Bleu",
     "pokedex-id": 931,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10260.png",
-    "form_type": "blue-plumage",
+    "form_type": "plumage",
     "type": "normal/flying"
   },
   {
     "name": "Tapatoès Plumage Jaune",
     "pokedex-id": 931,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10261.png",
-    "form_type": "yellow-plumage",
+    "form_type": "plumage",
     "type": "normal/flying"
   },
   {
@@ -7652,7 +7857,7 @@
     "type": "water"
   },
   {
-    "name": "Superdofin Forme Super",
+    "name": "Superdofin Heros",
     "pokedex-id": 964,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10256.png",
     "form_type": "hero",
@@ -7737,23 +7942,23 @@
     "type": "water"
   },
   {
-    "name": "Nigirigon",
+    "name": "Nigirigon Courbé",
     "pokedex-id": 978,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png",
     "type": "dragon/water"
   },
   {
-    "name": "Nigirigon Forme Affalée",
+    "name": "Nigirigon Affalé",
     "pokedex-id": 978,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10258.png",
-    "form_type": "droopy",
+    "form_type": "nigirigon",
     "type": "dragon/water"
   },
   {
-    "name": "Nigirigon Forme Raide",
+    "name": "Nigirigon Raide",
     "pokedex-id": 978,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10259.png",
-    "form_type": "stretchy",
+    "form_type": "nigirigon",
     "type": "dragon/water"
   },
   {
@@ -7911,28 +8116,28 @@
     "name": "Koraidon Forme Limitée",
     "pokedex-id": 1007,
     "sprite": null,
-    "form_type": "limited-build",
+    "form_type": "buid",
     "type": "fighting/dragon"
   },
   {
     "name": "Koraidon Forme de Course",
     "pokedex-id": 1007,
     "sprite": null,
-    "form_type": "sprinting-build",
+    "form_type": "buid",
     "type": "fighting/dragon"
   },
   {
     "name": "Koraidon Forme de Nage",
     "pokedex-id": 1007,
     "sprite": null,
-    "form_type": "swimming-build",
+    "form_type": "buid",
     "type": "fighting/dragon"
   },
   {
     "name": "Koraidon Forme de Vol",
     "pokedex-id": 1007,
     "sprite": null,
-    "form_type": "gliding-build",
+    "form_type": "buid",
     "type": "fighting/dragon"
   },
   {
@@ -7945,28 +8150,28 @@
     "name": "Miraidon Mode Aérien",
     "pokedex-id": 1008,
     "sprite": null,
-    "form_type": "glide-mode",
+    "form_type": "buid",
     "type": "electric/dragon"
   },
   {
     "name": "Miraidon Mode Aquatique",
     "pokedex-id": 1008,
     "sprite": null,
-    "form_type": "aquatic-mode",
+    "form_type": "buid",
     "type": "electric/dragon"
   },
   {
     "name": "Miraidon Mode Bridé",
     "pokedex-id": 1008,
     "sprite": null,
-    "form_type": "low-power-mode",
+    "form_type": "buid",
     "type": "electric/dragon"
   },
   {
     "name": "Miraidon Mode Terrestre",
     "pokedex-id": 1008,
     "sprite": null,
-    "form_type": "drive-mode",
+    "form_type": "buid",
     "type": "electric/dragon"
   },
   {
@@ -8021,21 +8226,21 @@
     "name": "Ogerpon du Fourneau",
     "pokedex-id": 1017,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10274.png",
-    "form_type": "hearthflame-mask",
+    "form_type": "ogerpon-mask",
     "type": "grass/fire"
   },
   {
     "name": "Ogerpon du Puits",
     "pokedex-id": 1017,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10273.png",
-    "form_type": "wellspring-mask",
+    "form_type": "ogerpon-mask",
     "type": "grass/water"
   },
   {
     "name": "Ogerpon de la Pierre",
     "pokedex-id": 1017,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10275.png",
-    "form_type": "cornerstone-mask",
+    "form_type": "ogerpon-mask",
     "type": "grass/rock"
   },
   {
@@ -8061,12 +8266,6 @@
     "pokedex-id": 1022,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1022.png",
     "type": "rock/psychic"
-  },
-  {
-    "name": "Terapagos",
-    "pokedex-id": 1024,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1024.png",
-    "type": "normal"
   },
   {
     "name": "Terapagos Stellaire",

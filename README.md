@@ -86,4 +86,19 @@ To export the current page of cards to PDF:
 - React
 - TypeScript
 - Vite
-- CSS
+- Tailwind CSS
+
+## Styling with Tailwind CSS
+
+This project uses Tailwind CSS for styling. The main benefits include:
+
+- Utility-first approach for rapid UI development
+- Consistent design system
+- Easy responsive design
+- Reduced CSS bundle size through purging unused styles
+
+Tailwind CSS is configured in the following files:
+
+- `tailwind.config.cjs` - Configuration for theme, colors, and plugins
+- `postcss.config.cjs` - PostCSS configuration for Tailwind CSS
+- `src/index.css` - Contains Tailwind directives and custom component styles

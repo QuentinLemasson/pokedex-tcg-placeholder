@@ -1,14 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import CardGrid from "./components/CardGrid";
 import { Pokemon } from "./types";
 import { exportToPdf } from "./utils/pdfExport";
+import { FormFilterContainer } from "./components/form-filter.container";
 
 function App() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 9; // 3x3 grid
-  const totalPages = Math.ceil(pokemons.length / cardsPerPage);
   const mainRef = useRef<HTMLDivElement>(null);
+
+  const [selectedForms, setSelectedForms] = useState<string[]>([]);
+
+  const handleFilterChange = (selectedForms: string[]) => {
+    // Reset to first page when filters change
+    setCurrentPage(1);
+    setSelectedForms(selectedForms);
+  };
 
   useEffect(() => {
     // Fetch Pokemon data
@@ -17,6 +25,35 @@ function App() {
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error fetching Pokemon data:", error));
   }, []);
+
+  // Filter Pokemon based on selection criteria
+  const filteredPokemons = useMemo(() => {
+    // If no forms are selected, return all Pokemon
+    if (selectedForms.length === 0) {
+      return pokemons;
+    }
+
+    // Otherwise, return Pokemon that either:
+    // 1. Have no form_type property (always show these)
+    // 2. Have a form_type that's included in the selectedForms
+    return pokemons.filter(
+      (pokemon) =>
+        !pokemon.form_type || selectedForms.includes(pokemon.form_type)
+    );
+  }, [pokemons, selectedForms]);
+
+  // Calculate total pages based on filtered Pokemon
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredPokemons.length / cardsPerPage)
+  );
+
+  // Make sure current page is valid after filtering
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [totalPages, currentPage]);
 
   const handlePrevPage = () => {
     setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev));
@@ -27,7 +64,7 @@ function App() {
   };
 
   // Get current page's Pokemon
-  const currentPokemons = pokemons.slice(
+  const currentPokemons = filteredPokemons.slice(
     (currentPage - 1) * cardsPerPage,
     currentPage * cardsPerPage
   );
@@ -57,16 +94,36 @@ function App() {
           </button>
         </h1>
       </header>
-      <div className="max-w-6xl mx-auto h-full flex flex-col">
-        <main ref={mainRef} className="flex-1">
-          <CardGrid
-            pokemons={currentPokemons}
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPrevPage={handlePrevPage}
-            onNextPage={handleNextPage}
+      <div className="relative h-full w-full">
+        {/* Fixed position filter sidebar */}
+        <div className="fixed left-4 top-8xl w-64 z-20">
+          <FormFilterContainer
+            onFilterChange={handleFilterChange}
+            selection={selectedForms}
           />
-        </main>
+          {selectedForms.length > 0 && (
+            <div className="mt-2 bg-white p-2 rounded-lg shadow text-sm">
+              <p>
+                Showing:{" "}
+                <span className="font-bold">{filteredPokemons.length}</span>{" "}
+                Pokémon
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Main content with left padding to accommodate sidebar */}
+        <div className="w-full h-full">
+          <main ref={mainRef} className="flex-1 w-full mx-auto max-w-4xl">
+            <CardGrid
+              pokemons={currentPokemons}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPrevPage={handlePrevPage}
+              onNextPage={handleNextPage}
+            />
+          </main>
+        </div>
       </div>
     </div>
   );

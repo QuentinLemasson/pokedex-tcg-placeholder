@@ -4,4 +4,5 @@ export interface Pokemon {
   sprite: string;
   type: string;
   form_type?: string;
+  gen: number;
 }

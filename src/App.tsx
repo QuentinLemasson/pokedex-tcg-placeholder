@@ -3,6 +3,7 @@ import CardGrid from "./components/CardGrid";
 import { Pokemon } from "./types";
 import { exportToPdf } from "./utils/pdfExport";
 import { FormFilterContainer } from "./components/form-filter.container";
+import { GenerationFilter } from "./components/GenerationFilter";
 
 function App() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -11,11 +12,18 @@ function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   const [selectedForms, setSelectedForms] = useState<string[]>([]);
+  const [selectedGenerations, setSelectedGenerations] = useState<number[]>([]);
 
-  const handleFilterChange = (selectedForms: string[]) => {
+  const handleFormFilterChange = (selectedForms: string[]) => {
     // Reset to first page when filters change
     setCurrentPage(1);
     setSelectedForms(selectedForms);
+  };
+
+  const handleGenerationFilterChange = (selectedGenerations: number[]) => {
+    // Reset to first page when filters change
+    setCurrentPage(1);
+    setSelectedGenerations(selectedGenerations);
   };
 
   useEffect(() => {
@@ -28,19 +36,21 @@ function App() {
 
   // Filter Pokemon based on selection criteria
   const filteredPokemons = useMemo(() => {
-    // If no forms are selected, return all Pokemon
-    if (selectedForms.length === 0) {
-      return pokemons;
-    }
+    return pokemons.filter((pokemon) => {
+      // Form type filter
+      const formTypeMatch =
+        selectedForms.length === 0 ||
+        !pokemon.form_type ||
+        selectedForms.includes(pokemon.form_type);
 
-    // Otherwise, return Pokemon that either:
-    // 1. Have no form_type property (always show these)
-    // 2. Have a form_type that's included in the selectedForms
-    return pokemons.filter(
-      (pokemon) =>
-        !pokemon.form_type || selectedForms.includes(pokemon.form_type)
-    );
-  }, [pokemons, selectedForms]);
+      // Generation filter
+      const generationMatch =
+        selectedGenerations.length === 0 ||
+        (pokemon.gen && selectedGenerations.includes(pokemon.gen));
+
+      return formTypeMatch && generationMatch;
+    });
+  }, [pokemons, selectedForms, selectedGenerations]);
 
   // Calculate total pages based on filtered Pokemon
   const totalPages = Math.max(
@@ -96,20 +106,25 @@ function App() {
       </header>
       <div className="relative h-full w-full">
         {/* Fixed position filter sidebar */}
-        <div className="fixed left-4 top-8xl w-64 z-20">
+        <div className="fixed left-4 top-8xl w-64 z-20 space-y-4">
           <FormFilterContainer
-            onFilterChange={handleFilterChange}
+            onFilterChange={handleFormFilterChange}
             selection={selectedForms}
           />
-          {selectedForms.length > 0 && (
-            <div className="mt-2 bg-white p-2 rounded-lg shadow text-sm">
-              <p>
-                Showing:{" "}
-                <span className="font-bold">{filteredPokemons.length}</span>{" "}
-                Pokémon
-              </p>
-            </div>
-          )}
+          <div className="mt-2 bg-white p-2 rounded-lg shadow text-sm">
+            <p>
+              Showing:{" "}
+              <span className="font-bold">{filteredPokemons.length}</span>{" "}
+              Pokémon
+            </p>
+          </div>
+        </div>
+
+        <div className="fixed right-4 top-8xl w-64 z-20 space-y-4">
+          <GenerationFilter
+            onFilterChange={handleGenerationFilterChange}
+            selection={selectedGenerations}
+          />
         </div>
 
         {/* Main content with left padding to accommodate sidebar */}

@@ -4931,13 +4931,6 @@
     "gen": 4
   },
   {
-    "name": "Victini",
-    "pokedex-id": 494,
-    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/494.png",
-    "type": "psychic/fire",
-    "gen": 5
-  },
-  {
     "name": "Vipélierre",
     "pokedex-id": 495,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png",
@@ -5012,7 +5005,8 @@
     "name": "Ratentif",
     "pokedex-id": 504,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/504.png",
-    "type": "normal"
+    "type": "normal",
+    "gen": 5
   },
   {
     "name": "Miradar",
@@ -5356,7 +5350,6 @@
     "name": "Bargantua Bleu",
     "pokedex-id": 550,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10016.png",
-    "form_type": "blue-striped",
     "type": "water",
     "gen": 5
   },
@@ -5364,7 +5357,7 @@
     "name": "Bargantua Blanc",
     "pokedex-id": 550,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10247.png",
-    "form_type": "white-striped",
+    "form_type": "hisui",
     "type": "water",
     "gen": 5
   },
@@ -5446,7 +5439,7 @@
     "name": "Darumacho de Galar Transe",
     "pokedex-id": 555,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10178.png",
-    "form_type": "galar-zen",
+    "form_type": "zen",
     "type": "ice/fire",
     "gen": 5
   },
@@ -6224,6 +6217,13 @@
     "pokedex-id": 649,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/649.png",
     "type": "bug/steel",
+    "gen": 5
+  },
+  {
+    "name": "Victini",
+    "pokedex-id": 494,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/494.png",
+    "type": "psychic/fire",
     "gen": 5
   },
   {
@@ -7102,7 +7102,7 @@
     "name": "Lougaroc Crépusculaire",
     "pokedex-id": 745,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10152.png",
-    "form_type": "dusk",
+    "form_type": "lycanroc",
     "type": "rock",
     "gen": 7
   },
@@ -7110,7 +7110,7 @@
     "name": "Lougaroc Nocturne",
     "pokedex-id": 745,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10126.png",
-    "form_type": "midnight",
+    "form_type": "lycanroc",
     "type": "rock",
     "gen": 7
   },
@@ -8121,7 +8121,8 @@
     "name": "Nigosier",
     "pokedex-id": 845,
     "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/845.png",
-    "type": "flying/water"
+    "type": "flying/water",
+    "gen": 8
   },
   {
     "name": "Nigosier Forme Gobe-Chu",

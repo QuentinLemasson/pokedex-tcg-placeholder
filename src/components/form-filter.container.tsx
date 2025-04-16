@@ -9,7 +9,7 @@ import {
 // Group form types by category
 const formTypeCategories = {
   regional: ["alola", "galar", "hisui", "paldea"],
-  transformations: ["mega", "gmax", "eternamax", "weather"],
+  transformations: ["mega", "gmax", "eternamax", "weather", "zen"],
   specialForms: [
     "cap",
     "cosplay",
@@ -54,7 +54,11 @@ const formTypeCategories = {
     "buid",
     "ogerpon-mask",
     "terastal",
-  ],
+    "school",
+    "lycanroc",
+    "core",
+    "hangry",
+  ].sort(),
 };
 
 // Category labels for display
@@ -302,13 +306,15 @@ FormFilter.ClearButton = ClearButton;
 export const FormFilterContainer = (props: FormFilterProps) => {
   return (
     <FormFilter {...props}>
-      {Object.entries(formTypeCategories).map(([category, forms]) => (
-        <FormFilter.Category key={category} name={category} forms={forms}>
-          {forms.map((form) => (
-            <FormFilter.FormItem key={form} value={form} />
-          ))}
-        </FormFilter.Category>
-      ))}
+      <div className="flex flex-col gap-2 max-h-[70vh] overflow-y-auto">
+        {Object.entries(formTypeCategories).map(([category, forms]) => (
+          <FormFilter.Category key={category} name={category} forms={forms}>
+            {forms.map((form) => (
+              <FormFilter.FormItem key={form} value={form} />
+            ))}
+          </FormFilter.Category>
+        ))}
+      </div>
       <div className="flex justify-center">
         <FormFilter.ClearButton />
       </div>
